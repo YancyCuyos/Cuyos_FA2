@@ -1,88 +1,74 @@
-/* General Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* GENERAL */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #888484;
 }
 
-/* HERO SECTION */
+/* LOGO */
+.logo-container img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+/* HERO */
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background-color: #f5f5f5;
+  background-color: #3d3e3d;
+  color: white;
 }
 
-.logo-container img {
-  width: 150px;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.cta {
-  display: inline-block;
-  padding: 15px 30px;
-  background-color: #007bff;
+/* CTA BUTTONS */
+.cta, .back-btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  background-color: #717b73;
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.2s ease;
 }
 
-.cta:hover {
-  background-color: #0056b3;
+.cta:hover, .back-btn:hover {
+  background-color: #005fcc;
 }
 
-/* FEATURES SECTION */
+/* FEATURES */
 .features {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 50px 20px;
-  background-color: #ffffff;
 }
 
 .feature-card {
   flex: 1 1 250px;
   margin: 10px;
-  padding: 25px;
-  background: #f0f0f0;
-  border-radius: 10px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   text-align: center;
-  font-weight: bold;
 }
 
-/* VISUAL SECTION */
-.visual {
-  text-align: center;
-  padding: 50px 20px;
-}
-
+/* VISUAL */
 .visual img {
-  max-width: 800px;
   width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
   border-radius: 10px;
 }
 
-/* INFO / LEARN SECTION */
+/* INFO SECTION */
 .info {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
+  padding: 100px 20px;
+  background-color: #f5f5f5;
 }
 
 .info h2 {
@@ -100,21 +86,59 @@ body {
 /* FINAL CTA */
 .cta-final {
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background: #333;
+  background: #1c1c1c;
+  color: #4b8589;
+}
+
+/* LEARN PAGE */
+.learn-header {
+  text-align: center;
+  padding: 50px 20px;
   color: #fff;
 }
 
-/* Responsive */
+.learn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.learn-card {
+  background: #6c686800;
+  padding: 30px 10px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.learn-card:hover {
+  background: #007bff;
+  color: white;
+}
+
+.back-btn-container {
+  text-align: center;
+  padding: 30px;
+}
+
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
   .features {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .feature-card {
+    margin: 10px 0;
   }
 }
